@@ -3,5 +3,17 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="x">Notifications</string>
+
+    <!-- 人数のラベル -->
+    <string name="text_label_person">人数:</string>
+    <!-- 金額のラベル -->
+    <string name="text_label_price">金額:</string>
+    <!-- 計算ボタンのラベル -->
+    <string name="button_label_calculate">計算!</string>
+    <!-- リセットボタンのラベル -->
+    <string name="button_label_reset">リセット</string>
+    <!-- 結果1のラベル -->
+    <string name="result1"> </string>
+    <!-- 結果2のラベル(支払う金額が異なった場合につける) -->
+    <string name="result2"> </string>
 </resources>
