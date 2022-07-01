@@ -1,7 +1,9 @@
 package com.example.dutchtreat;
 
 import android.os.Bundle;
-
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +17,7 @@ import com.example.dutchtreat.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
+    private TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,30 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+    }
+
+
+    public void onClick(View v){
+
+        EditText editText1 = (EditText)findViewById (R.id.text1);
+        EditText editText2 = (EditText)findViewById (R.id.text2);
+        String str1 = editText1.getText().toString();
+        String str2 = editText2.getText().toString();
+
+        int money = Integer . parseInt (str1);
+        int number = Integer . parseInt (str2);
+
+        int divide =0;
+
+        if (money % number == 0) {
+            divide = money / number;
+        } else {
+            divide = money / number + 1;
+        }
+
+        String str3 = String.valueOf(divide);
+        textView1.setText(str3);
+
     }
 
 }
