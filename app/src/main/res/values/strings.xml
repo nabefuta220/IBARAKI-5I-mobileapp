@@ -16,4 +16,8 @@
     <string name="result1"> </string>
     <!-- 結果2のラベル(支払う金額が異なった場合につける) -->
     <string name="result2"> </string>
+
+    <string name="switch_text">アバウト割り勘モード</string>
+    <string name="switch_on">ON</string>
+    <string name="switch_off">OFF</string>
 </resources>
