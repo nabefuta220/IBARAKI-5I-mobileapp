@@ -60,4 +60,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void st18126sh(int Total_Number_of_People, int Total_Money) {
+        int Amount_to_Pay_1;
+        int Amount_to_Pay_2;
+        int Number_of_People_1;
+        int Number_of_People_2;
+        if (Total_Money % Total_Number_of_People == 0) {
+            Amount_to_Pay_1 = Total_Money / Total_Number_of_People;
+        } else {
+            int x;
+            x = Total_Money % Total_Number_of_People;
+            y = Total_Money - x;
+            Amount_to_Pay_1 = y / Total_Number_of_People;
+            Number_of_People_1 = Total_Number_of_People - x;
+            Amount_to_Pay_2 = Amount_to_Pay_1 + 1;
+            Number_of_People_2 = x;
+        }
+    }
 }
