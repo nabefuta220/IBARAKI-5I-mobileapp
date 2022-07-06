@@ -55,7 +55,13 @@ public class MainActivity extends AppCompatActivity {
             Log.i("MainActivity_Main", "total2: " + String.valueOf(Amount_to_Pay_2));
             Log.i("MainActivity_Main", "People2: " + String.valueOf(Number_of_People_2));
 
+            result1.setText(String.valueOf(Amount_to_Pay_1)+"円 x "+String.valueOf(Number_of_People_1)+"人");
 
+            if(Amount_to_Pay_2!=-1) {
+                result2.setText(String.valueOf(Amount_to_Pay_2) + "円 x " + String.valueOf(Number_of_People_2) + "人");
+            }else{
+                result2.setText("");
+            }
         }catch (NumberFormatException e){
             return ;
         }
@@ -75,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String str3 = String.valueOf(divide);
-        textView1.setText(str3);
+       // textView1.setText(str3);
     }
 
     public void st18126sh(int Total_Number_of_People, int Total_Money) {
