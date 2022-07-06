@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,11 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private int Number_of_People_2;
     private EditText editText1;
     private EditText editText2;
+    private Switch flag_about;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/**/
+        flag_about=(Switch)findViewById(R.id.switch2);
         editText1 = (EditText) findViewById(R.id.text_label_person);
         editText2 = (EditText) findViewById(R.id.text_label_price);
         result1=(TextView) findViewById(R.id.result1);
@@ -46,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
             Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Money));
             Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Number_of_People));
 
-            //calculate_about(Total_Money,Total_Number_of_People);
-            st18126sh(Total_Money,Total_Number_of_People);
-
+            if(flag_about.isChecked()) {
+                calculate_about(Total_Money, Total_Number_of_People);
+            }else {
+                st18126sh(Total_Money, Total_Number_of_People);
+            }
 
             Log.i("MainActivity_Main", "Money1: " + String.valueOf(Amount_to_Pay_1));
             Log.i("MainActivity_Main", "People1: " + String.valueOf(Number_of_People_1));
