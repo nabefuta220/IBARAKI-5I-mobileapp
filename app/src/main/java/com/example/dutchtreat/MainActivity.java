@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-    private TextView textView1;
+    private TextView result1,result2;
     private int Amount_to_Pay_1;
     private int Amount_to_Pay_2;
     private int Number_of_People_1;
@@ -26,10 +26,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);/**/
         editText1 = (EditText) findViewById(R.id.text_label_person);
         editText2 = (EditText) findViewById(R.id.text_label_price);
+        result1=(TextView) findViewById(R.id.result1);
+        result2=(TextView) findViewById(R.id.result2);
     }
     public void onReset(View v){
         editText1.setText("");
         editText2.setText("");
+
+        result1.setText("");
+        result2.setText("");
     }
     public void onClick(View v) {
 
@@ -38,10 +43,19 @@ public class MainActivity extends AppCompatActivity {
         try {
             int Total_Money = Integer.parseInt(str1);
             int Total_Number_of_People = Integer.parseInt(str2);
-            Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Money));
-            Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Number_of_People));
+            Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Money));
+            Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Number_of_People));
+
             //calculate_about(Total_Money,Total_Number_of_People);
-            // st18126sh(Total_Money,Total_Number_of_People);
+            st18126sh(Total_Money,Total_Number_of_People);
+
+
+            Log.i("MainActivity_Main", "Money1: " + String.valueOf(Amount_to_Pay_1));
+            Log.i("MainActivity_Main", "People1: " + String.valueOf(Number_of_People_1));
+            Log.i("MainActivity_Main", "total2: " + String.valueOf(Amount_to_Pay_2));
+            Log.i("MainActivity_Main", "People2: " + String.valueOf(Number_of_People_2));
+
+
         }catch (NumberFormatException e){
             return ;
         }
@@ -68,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (Total_Money % Total_Number_of_People == 0) {
             Amount_to_Pay_1 = Total_Money / Total_Number_of_People;
+            Number_of_People_1=Total_Number_of_People;
+            Amount_to_Pay_2=-1;
         } else {
             int x;
             x = Total_Money % Total_Number_of_People;
