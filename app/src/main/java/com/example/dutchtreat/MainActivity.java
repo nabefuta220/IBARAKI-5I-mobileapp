@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         String str1 = editText1.getText().toString();
         String str2 = editText2.getText().toString();
         try {
-            int Total_Money = Integer.parseInt(str1);
-            int Total_Number_of_People = Integer.parseInt(str2);
-            Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Money));
-            Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Number_of_People));
+            int Total_Money = Integer.parseInt(str2);
+            int Total_Number_of_People = Integer.parseInt(str1);
+            Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Money));
+            Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Number_of_People));
 
-            calculate_about(Total_Money,Total_Number_of_People);
-            //st18126sh(Total_Money,Total_Number_of_People);
+            //calculate_about(Total_Money,Total_Number_of_People);
+            st18126sh(Total_Money,Total_Number_of_People);
 
 
             Log.i("MainActivity_Main", "Money1: " + String.valueOf(Amount_to_Pay_1));
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void calculate_about(int Total_Number_of_People,int Total_Money) {
+    private void calculate_about(int Total_Money,int Total_Number_of_People) {
 
 
 
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         Amount_to_Pay_2=-1;
     }
 
-    public void st18126sh(int Total_Number_of_People, int Total_Money) {
+    public void st18126sh( int Total_Money,int Total_Number_of_People) {
 
         if (Total_Money % Total_Number_of_People == 0) {
             Amount_to_Pay_1 = Total_Money / Total_Number_of_People;
