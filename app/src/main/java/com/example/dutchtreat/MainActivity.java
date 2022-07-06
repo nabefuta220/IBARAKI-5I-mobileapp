@@ -27,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
         editText1 = (EditText) findViewById(R.id.text_label_person);
         editText2 = (EditText) findViewById(R.id.text_label_price);
     }
-
+    public void onReset(View v){
+        editText1.setText("");
+        editText2.setText("");
+    }
     public void onClick(View v) {
 
         String str1 = editText1.getText().toString();
