@@ -5,19 +5,26 @@
     <string name="title_notifications">Notifications</string>
 
     <!-- 人数のラベル -->
-    <string name="text_label_person">人数:</string>
+    <string name="hint_text_label_person">人数</string>
+    <string name="unit_person_text">人</string>
     <!-- 金額のラベル -->
-    <string name="text_label_price">金額:</string>
+    <string name="label_price_text">金額</string>
+    <string name="unit_price_text">円</string>
     <!-- 計算ボタンのラベル -->
-    <string name="button_label_calculate">計算!</string>
+    <string name="button_label_calculate">割り勘する</string>
     <!-- リセットボタンのラベル -->
     <string name="button_label_reset">リセット</string>
     <!-- 結果1のラベル -->
     <string name="result1"> </string>
     <!-- 結果2のラベル(支払う金額が異なった場合につける) -->
     <string name="result2"> </string>
-
     <string name="switch_text">アバウト割り勘モード</string>
-    <string name="switch_on">ON</string>
-    <string name="switch_off">OFF</string>
+
+
+
+    <string name="result1_text">結果１</string>
+    <string name="result2_text">結果２</string>
+    <string name="reset_text">リセット</string>
+
+
 </resources>
