@@ -35,12 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
         String str1 = editText1.getText().toString();
         String str2 = editText2.getText().toString();
-        int Total_Money = Integer.parseInt(str1);
-        int Total_Number_of_People = Integer.parseInt(str2);
-        Log.i("MainActivity_Main", String.valueOf(Total_Money));
-        Log.i("MainActivity_Main", String.valueOf(Total_Number_of_People));
-        calculate_about(Total_Money,Total_Number_of_People);
-        st18126sh(Total_Money,Total_Number_of_People);
+        try {
+            int Total_Money = Integer.parseInt(str1);
+            int Total_Number_of_People = Integer.parseInt(str2);
+            Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Money));
+            Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Number_of_People));
+            //calculate_about(Total_Money,Total_Number_of_People);
+            // st18126sh(Total_Money,Total_Number_of_People);
+        }catch (NumberFormatException e){
+            return ;
+        }
+
     }
 
     private void calculate_about(int Total_Money,int Total_Number_of_People) {
