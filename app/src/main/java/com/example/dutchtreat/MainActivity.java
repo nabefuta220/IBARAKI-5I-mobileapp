@@ -68,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 result2.setText("");
             }
         }catch (NumberFormatException e){
-            return ;
+            return;
+        }catch (ArithmeticException e){
+            return;
         }
 
     }
