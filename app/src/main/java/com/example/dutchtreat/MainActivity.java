@@ -31,14 +31,15 @@ public class MainActivity extends AppCompatActivity {
         EditText editText2 = (EditText) findViewById(R.id.text2);
         String str1 = editText1.getText().toString();
         String str2 = editText2.getText().toString();
-        calculate_about();
-
-    }
-
-    private void calculate_about() {
-
         int Total_Money = Integer.parseInt(str1);
         int Total_Number_of_People = Integer.parseInt(str2);
+        calculate_about(Total_Money,Total_Number_of_People);
+        st18126sh(Total_Money,Total_Number_of_People);
+    }
+
+    private void calculate_about(int Total_Money,int Total_Number_of_People) {
+
+
 
         int divide = 0;
 
