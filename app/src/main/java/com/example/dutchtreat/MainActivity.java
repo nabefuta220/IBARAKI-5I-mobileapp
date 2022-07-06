@@ -1,13 +1,13 @@
 package com.example.dutchtreat;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dutchtreat.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,22 +17,25 @@ public class MainActivity extends AppCompatActivity {
     private int Amount_to_Pay_2;
     private int Number_of_People_1;
     private int Number_of_People_2;
-
+    private EditText editText1;
+    private EditText editText2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);/**/
-
+        editText1 = (EditText) findViewById(R.id.text_label_person);
+        editText2 = (EditText) findViewById(R.id.text_label_price);
     }
 
     public void onClick(View v) {
-        EditText editText1 = (EditText) findViewById(R.id.text_label_person);
-        EditText editText2 = (EditText) findViewById(R.id.text_label_price);
+
         String str1 = editText1.getText().toString();
         String str2 = editText2.getText().toString();
         int Total_Money = Integer.parseInt(str1);
         int Total_Number_of_People = Integer.parseInt(str2);
+        Log.i("MainActivity_Main", String.valueOf(Total_Money));
+        Log.i("MainActivity_Main", String.valueOf(Total_Number_of_People));
         calculate_about(Total_Money,Total_Number_of_People);
         st18126sh(Total_Money,Total_Number_of_People);
     }
