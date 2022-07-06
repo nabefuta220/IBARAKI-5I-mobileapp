@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         editText1.setText("");
         editText2.setText("");
 
-        result1.setText("");
-        result2.setText("");
+        result1.setText("結果１");
+        result2.setText("結果２");
     }
     public void onClick(View v) {
 
