@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
             Log.i("MainActivity_Main", "People: " + String.valueOf(Total_Money));
             Log.i("MainActivity_Main", "totalMoney: " + String.valueOf(Total_Number_of_People));
 
-            //calculate_about(Total_Money,Total_Number_of_People);
-            st18126sh(Total_Money,Total_Number_of_People);
+            calculate_about(Total_Money,Total_Number_of_People);
+            //st18126sh(Total_Money,Total_Number_of_People);
 
 
             Log.i("MainActivity_Main", "Money1: " + String.valueOf(Amount_to_Pay_1));
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void calculate_about(int Total_Money,int Total_Number_of_People) {
+    private void calculate_about(int Total_Number_of_People,int Total_Money) {
 
 
 
@@ -80,8 +80,9 @@ public class MainActivity extends AppCompatActivity {
             divide = Total_Money / Total_Number_of_People + 1;
         }
 
-        String str3 = String.valueOf(divide);
-       // textView1.setText(str3);
+        Amount_to_Pay_1=divide;
+        Number_of_People_1=Total_Number_of_People;
+        Amount_to_Pay_2=-1;
     }
 
     public void st18126sh(int Total_Number_of_People, int Total_Money) {
