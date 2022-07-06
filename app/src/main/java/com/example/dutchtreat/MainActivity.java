@@ -11,7 +11,7 @@ import com.example.dutchtreat.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+
     private TextView textView1;
     private int Amount_to_Pay_1;
     private int Amount_to_Pay_2;
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        EditText editText1 = (EditText) findViewById(R.id.text1);
-        EditText editText2 = (EditText) findViewById(R.id.text2);
+        EditText editText1 = (EditText) findViewById(R.id.text_label_person);
+        EditText editText2 = (EditText) findViewById(R.id.text_label_price);
         String str1 = editText1.getText().toString();
         String str2 = editText2.getText().toString();
         int Total_Money = Integer.parseInt(str1);
